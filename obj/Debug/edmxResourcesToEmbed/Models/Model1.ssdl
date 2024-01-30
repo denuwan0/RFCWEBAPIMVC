@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="saprfcdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="company">
+    <Key>
+      <PropertyRef Name="company_code" />
+    </Key>
+    <Property Name="company_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="company_code" Type="int" Nullable="false" />
+    <Property Name="company_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cost_center">
+    <Key>
+      <PropertyRef Name="cost_code" />
+    </Key>
+    <Property Name="cost_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cost_code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cost_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="domain">
+    <Key>
+      <PropertyRef Name="domain_id" />
+    </Key>
+    <Property Name="domain_id" Type="int" Nullable="false" />
+    <Property Name="domain_name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="function">
+    <Key>
+      <PropertyRef Name="func_name" />
+    </Key>
+    <Property Name="func_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="cost_center" Type="int" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="func_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="location">
+    <Key>
+      <PropertyRef Name="loc_name" />
+    </Key>
+    <Property Name="loc_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="loc_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="log_data">
+    <Key>
+      <PropertyRef Name="log_id" />
+    </Key>
+    <Property Name="log_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="emp_id" Type="int" Nullable="false" />
+    <Property Name="time" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="ip_address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="pc_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="is_authorised" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="p_area">
+    <Key>
+      <PropertyRef Name="p_area_name" />
+    </Key>
+    <Property Name="p_area_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="p_area_name" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="p_sub_area">
+    <Key>
+      <PropertyRef Name="p_sub_area_name" />
+    </Key>
+    <Property Name="p_sub_area_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="p_sub_area_name" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="plant">
+    <Key>
+      <PropertyRef Name="plant_code" />
+    </Key>
+    <Property Name="loc_id" Type="int" Nullable="false" />
+    <Property Name="plant_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="plant_code" Type="int" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="plant_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cost_center" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="req_tkt_type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="type_desc" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="type_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="request_ticket">
+    <Key>
+      <PropertyRef Name="req_tkt_id" />
+    </Key>
+    <Property Name="req_tkt_type" Type="int" Nullable="false" />
+    <Property Name="req_tkt_start_date" Type="date" Nullable="false" />
+    <Property Name="req_tkt_status" Type="int" Nullable="false" />
+    <Property Name="req_tkt_emp_id" Type="int" Nullable="false" />
+    <Property Name="req_tkt_end_date" Type="date" Nullable="false" />
+    <Property Name="req_tkt_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="url">
+    <Key>
+      <PropertyRef Name="url_id" />
+    </Key>
+    <Property Name="url_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="menu_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="url_value" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="url_type" Type="int" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="url_type">
+    <Key>
+      <PropertyRef Name="url_type_id" />
+    </Key>
+    <Property Name="url_type_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="url_type_name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="emp_epf" />
+    </Key>
+    <Property Name="emp_epf" Type="int" Nullable="false" />
+    <Property Name="emp_user_grp" Type="int" Nullable="false" />
+    <Property Name="emp_user_sub_grp" Type="int" Nullable="false" />
+    <Property Name="emp_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="emp_email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="emp_password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="emp_company" Type="int" Nullable="false" />
+    <Property Name="emp_function" Type="int" Nullable="false" />
+    <Property Name="emp_location" Type="int" Nullable="false" />
+    <Property Name="emp_plant" Type="int" Nullable="false" />
+    <Property Name="emp_mobile" Type="int" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="emp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_group">
+    <Key>
+      <PropertyRef Name="grp_name" />
+    </Key>
+    <Property Name="grp_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="grp_desc" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="grp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_permission">
+    <Key>
+      <PropertyRef Name="perm_id" />
+    </Key>
+    <Property Name="user_sub_grp_id" Type="int" Nullable="false" />
+    <Property Name="url" Type="int" Nullable="false" />
+    <Property Name="url_type" Type="int" Nullable="false" />
+    <Property Name="is_view" Type="tinyint" Nullable="false" />
+    <Property Name="is_edit" Type="tinyint" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="perm_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_sub_group">
+    <Key>
+      <PropertyRef Name="sub_group_id" />
+    </Key>
+    <Property Name="group_id" Type="int" Nullable="false" />
+    <Property Name="sub_group_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sub_group_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="sub_group_desc" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'saprfcdb.dbo.YH_ACT_EMP_LIST' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="YH_ACT_EMP_LIST">
+    <Key>
+      <PropertyRef Name="EPF" />
+    </Key>
+    <Property Name="EPF" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+    <Property Name="LOCATION" Type="int" />
+    <Property Name="FUNCT" Type="nchar" MaxLength="10" />
+    <Property Name="COST_CENTER" Type="nchar" MaxLength="10" />
+    <Property Name="ENDDA" Type="nchar" MaxLength="20" />
+    <Property Name="BIRTHDA" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="saprfcdbModelStoreContainer">
+    <EntitySet Name="company" EntityType="Self.company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cost_center" EntityType="Self.cost_center" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="domain" EntityType="Self.domain" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="function" EntityType="Self.function" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="location" EntityType="Self.location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="log_data" EntityType="Self.log_data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="p_area" EntityType="Self.p_area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="p_sub_area" EntityType="Self.p_sub_area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="plant" EntityType="Self.plant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="req_tkt_type" EntityType="Self.req_tkt_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="request_ticket" EntityType="Self.request_ticket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="url" EntityType="Self.url" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="url_type" EntityType="Self.url_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user_group" EntityType="Self.user_group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user_permission" EntityType="Self.user_permission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user_sub_group" EntityType="Self.user_sub_group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="YH_ACT_EMP_LIST" EntityType="Self.YH_ACT_EMP_LIST" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [YH_ACT_EMP_LIST].[EPF] AS [EPF], 
+    [YH_ACT_EMP_LIST].[NAME] AS [NAME], 
+    [YH_ACT_EMP_LIST].[LOCATION] AS [LOCATION], 
+    [YH_ACT_EMP_LIST].[FUNCT] AS [FUNCT], 
+    [YH_ACT_EMP_LIST].[COST_CENTER] AS [COST_CENTER], 
+    [YH_ACT_EMP_LIST].[ENDDA] AS [ENDDA], 
+    [YH_ACT_EMP_LIST].[BIRTHDA] AS [BIRTHDA]
+    FROM [dbo].[YH_ACT_EMP_LIST] AS [YH_ACT_EMP_LIST]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="saprfcdbModelStoreContainer" CdmEntityContainer="saprfcdbEntities2">
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="saprfcdbModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="emp_epf" ColumnName="emp_epf" />
+          <ScalarProperty Name="emp_user_grp" ColumnName="emp_user_grp" />
+          <ScalarProperty Name="emp_user_sub_grp" ColumnName="emp_user_sub_grp" />
+          <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+          <ScalarProperty Name="emp_email" ColumnName="emp_email" />
+          <ScalarProperty Name="emp_password" ColumnName="emp_password" />
+          <ScalarProperty Name="emp_company" ColumnName="emp_company" />
+          <ScalarProperty Name="emp_function" ColumnName="emp_function" />
+          <ScalarProperty Name="emp_mobile" ColumnName="emp_mobile" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

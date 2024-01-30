@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="saprfcdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="company">
+    <Key>
+      <PropertyRef Name="company_id" />
+    </Key>
+    <Property Name="company_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="company_code" Type="Int32" Nullable="false" />
+    <Property Name="company_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cost_center">
+    <Key>
+      <PropertyRef Name="cost_id" />
+    </Key>
+    <Property Name="cost_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cost_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cost_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="function">
+    <Key>
+      <PropertyRef Name="func_id" />
+    </Key>
+    <Property Name="func_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="func_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="location">
+    <Key>
+      <PropertyRef Name="loc_id" />
+    </Key>
+    <Property Name="loc_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="loc_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="log_data">
+    <Key>
+      <PropertyRef Name="log_id" />
+    </Key>
+    <Property Name="log_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="time" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ip_address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pc_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_authorised" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="plant">
+    <Key>
+      <PropertyRef Name="plant_id" />
+    </Key>
+    <Property Name="plant_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="plant_code" Type="Int32" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="plant_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="req_tkt_type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="request_ticket">
+    <Key>
+      <PropertyRef Name="req_tkt_id" />
+    </Key>
+    <Property Name="req_tkt_start_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="req_tkt_status" Type="Int32" Nullable="false" />
+    <Property Name="req_tkt_end_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="req_tkt_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="url">
+    <Key>
+      <PropertyRef Name="url_id" />
+    </Key>
+    <Property Name="url_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="url_value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="url_type" Type="Int32" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="url_type">
+    <Key>
+      <PropertyRef Name="url_type_id" />
+    </Key>
+    <Property Name="url_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="url_type_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Byte" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="emp_id" />
+    </Key>
+    <Property Name="emp_epf" Type="Int32" Nullable="false" />
+    <Property Name="emp_user_grp" Type="Int32" Nullable="false" />
+    <Property Name="emp_user_sub_grp" Type="Int32" Nullable="false" />
+    <Property Name="emp_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="emp_email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="emp_password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="emp_plant" Type="Int32" Nullable="false" />
+    <Property Name="emp_mobile" Type="Int32" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="emp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="user_group">
+    <Key>
+      <PropertyRef Name="grp_id" />
+    </Key>
+    <Property Name="grp_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="grp_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="grp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="user_permission">
+    <Key>
+      <PropertyRef Name="perm_id" />
+    </Key>
+    <Property Name="user_sub_grp_id" Type="Int32" Nullable="false" />
+    <Property Name="url" Type="Int32" Nullable="false" />
+    <Property Name="url_type" Type="Int32" Nullable="false" />
+    <Property Name="is_view" Type="Byte" Nullable="false" />
+    <Property Name="is_edit" Type="Byte" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="perm_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="user_sub_group">
+    <Key>
+      <PropertyRef Name="sub_group_id" />
+    </Key>
+    <Property Name="group_id" Type="Int32" Nullable="false" />
+    <Property Name="sub_group_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sub_group_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sub_group_desc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="YH_ACT_EMP_LIST">
+    <Key>
+      <PropertyRef Name="EPF" />
+    </Key>
+    <Property Name="EPF" Type="Int32" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LOCATION" Type="Int32" />
+    <Property Name="FUNCT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="COST_CENTER" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ENDDA" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="BIRTHDA" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="saprfcdbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="company" EntityType="Self.company" />
+    <EntitySet Name="cost_center" EntityType="Self.cost_center" />
+    <EntitySet Name="function" EntityType="Self.function" />
+    <EntitySet Name="location" EntityType="Self.location" />
+    <EntitySet Name="log_data" EntityType="Self.log_data" />
+    <EntitySet Name="plant" EntityType="Self.plant" />
+    <EntitySet Name="req_tkt_type" EntityType="Self.req_tkt_type" />
+    <EntitySet Name="request_ticket" EntityType="Self.request_ticket" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="url" EntityType="Self.url" />
+    <EntitySet Name="url_type" EntityType="Self.url_type" />
+    <EntitySet Name="user" EntityType="Self.user" />
+    <EntitySet Name="user_group" EntityType="Self.user_group" />
+    <EntitySet Name="user_permission" EntityType="Self.user_permission" />
+    <EntitySet Name="user_sub_group" EntityType="Self.user_sub_group" />
+    <EntitySet Name="YH_ACT_EMP_LIST" EntityType="Self.YH_ACT_EMP_LIST" />
+  </EntityContainer>
+</Schema>

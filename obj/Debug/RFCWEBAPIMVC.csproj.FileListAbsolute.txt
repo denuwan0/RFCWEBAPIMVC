@@ -1,0 +1,147 @@
+E:\RFC 2022\RFCWEBAPIMVC\bin\RFCWEBAPIMVC.dll.config
+E:\RFC 2022\RFCWEBAPIMVC\bin\RFCWEBAPIMVC.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\RFCWEBAPIMVC.pdb
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\csc.exe
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\csc.exe.config
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\csc.rsp
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\csi.exe
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\csi.rsp
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\System.AppContext.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\System.Collections.Immutable.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\System.IO.FileSystem.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\System.Reflection.Metadata.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\vbc.exe
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\vbc.exe.config
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\vbc.rsp
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\VBCSCompiler.exe
+E:\RFC 2022\RFCWEBAPIMVC\bin\roslyn\VBCSCompiler.exe.config
+E:\RFC 2022\RFCWEBAPIMVC\bin\Antlr3.Runtime.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\EntityFramework.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\EntityFramework.SqlServer.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\Microsoft.Web.Infrastructure.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\Newtonsoft.Json.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\sapnco.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\sapnco_utils.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Net.Http.Formatting.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Cors.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Helpers.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Http.Cors.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Http.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Http.WebHost.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Mvc.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Optimization.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Razor.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.WebPages.Deployment.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.WebPages.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.WebPages.Razor.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\WebGrease.dll
+E:\RFC 2022\RFCWEBAPIMVC\bin\EntityFramework.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\EntityFramework.SqlServer.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Http.Cors.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\Newtonsoft.Json.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Net.Http.Formatting.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Helpers.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Http.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Http.WebHost.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Mvc.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Optimization.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.Razor.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.WebPages.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.WebPages.Deployment.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\System.Web.WebPages.Razor.xml
+E:\RFC 2022\RFCWEBAPIMVC\bin\Antlr3.Runtime.pdb
+E:\RFC 2022\RFCWEBAPIMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\RFC 2022\RFCWEBAPIMVC\obj\Debug\RFCWEBAPIMVC.csproj.CoreCompileInputs.cache
+E:\RFC 2022\RFCWEBAPIMVC\obj\Debug\RFCWEBAPIMVC.csproj.CopyComplete
+E:\RFC 2022\RFCWEBAPIMVC\obj\Debug\RFCWEBAPIMVC.dll
+E:\RFC 2022\RFCWEBAPIMVC\obj\Debug\RFCWEBAPIMVC.pdb
+E:\RFC 2022\RFCWEBAPIMVC\obj\Debug\RFCWEBAPIMVC.csprojAssemblyReference.cache
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\WinSCP.exe
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\RFCWEBAPIMVC.dll.config
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\RFCWEBAPIMVC.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\RFCWEBAPIMVC.pdb
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\csc.exe
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\csc.exe.config
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\csc.rsp
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\csi.exe
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\csi.rsp
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\System.AppContext.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\System.Collections.Immutable.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\System.IO.FileSystem.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\System.Reflection.Metadata.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\vbc.exe
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\vbc.exe.config
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\vbc.rsp
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\VBCSCompiler.exe
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\roslyn\VBCSCompiler.exe.config
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\Antlr3.Runtime.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\EntityFramework.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\EntityFramework.SqlServer.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\Microsoft.Web.Infrastructure.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\MySql.Data.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\Newtonsoft.Json.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\sapnco.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\sapnco_utils.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Net.Http.Formatting.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.ValueTuple.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Cors.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Helpers.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Http.Cors.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Http.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Http.WebHost.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Mvc.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Optimization.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Razor.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.WebPages.Deployment.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.WebPages.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.WebPages.Razor.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\WebGrease.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\WinSCPnet.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\EntityFramework.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\EntityFramework.SqlServer.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\Newtonsoft.Json.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Net.Http.Formatting.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.ValueTuple.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Helpers.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Http.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Http.Cors.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Http.WebHost.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Mvc.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Razor.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.WebPages.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.WebPages.Deployment.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.WebPages.Razor.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\System.Web.Optimization.xml
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\bin\Antlr3.Runtime.pdb
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\obj\Debug\RFCWEBAPIMVC.csproj.AssemblyReference.cache
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\obj\Debug\RFCWEBAPIMVC.csproj.CoreCompileInputs.cache
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\obj\Debug\RFCWEBAPIMVC.csproj.CopyComplete
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\obj\Debug\RFCWEBAPIMVC.dll
+E:\RFC 2022\SAP RFC Working solution\RFCWEBAPIMVC\obj\Debug\RFCWEBAPIMVC.pdb

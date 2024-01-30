@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="saprfcdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="emp_id" />
+    </Key>
+    <Property Name="emp_epf" Type="int" Nullable="false" />
+    <Property Name="emp_user_grp" Type="int" Nullable="false" />
+    <Property Name="emp_user_sub_grp" Type="int" Nullable="false" />
+    <Property Name="emp_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="emp_email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="emp_password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="emp_company" Type="int" Nullable="false" />
+    <Property Name="emp_function" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="emp_mobile" Type="int" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="emp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="saprfcdbModelStoreContainer">
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

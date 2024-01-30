@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="saprfcdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="company">
+    <Key>
+      <PropertyRef Name="company_id" />
+    </Key>
+    <Property Name="company_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="company_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cost_center">
+    <Key>
+      <PropertyRef Name="cost_id" />
+    </Key>
+    <Property Name="cost_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cost_code" Type="int" Nullable="false" />
+    <Property Name="cost_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="function">
+    <Key>
+      <PropertyRef Name="func_id" />
+    </Key>
+    <Property Name="func_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="cost_center" Type="int" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="func_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="location">
+    <Key>
+      <PropertyRef Name="loc_id" />
+    </Key>
+    <Property Name="loc_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="loc_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="plant">
+    <Key>
+      <PropertyRef Name="plant_id" />
+    </Key>
+    <Property Name="loc_id" Type="int" Nullable="false" />
+    <Property Name="plant_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="plant_code" Type="int" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="plant_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cost_center" Type="int" />
+  </EntityType>
+  <EntityType Name="req_tkt_type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="type_desc" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="type_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="request_ticket">
+    <Key>
+      <PropertyRef Name="req_tkt_id" />
+    </Key>
+    <Property Name="req_tkt_type" Type="int" Nullable="false" />
+    <Property Name="req_tkt_start_date" Type="date" Nullable="false" />
+    <Property Name="req_tkt_status" Type="int" Nullable="false" />
+    <Property Name="req_tkt_end_date" Type="date" Nullable="false" />
+    <Property Name="req_tkt_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="emp_id" />
+    </Key>
+    <Property Name="emp_epf" Type="int" Nullable="false" />
+    <Property Name="emp_user_grp" Type="int" Nullable="false" />
+    <Property Name="emp_user_sub_grp" Type="int" Nullable="false" />
+    <Property Name="emp_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="emp_email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="emp_password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="emp_company" Type="int" Nullable="false" />
+    <Property Name="emp_function" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="emp_mobile" Type="int" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="emp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_group">
+    <Key>
+      <PropertyRef Name="grp_id" />
+    </Key>
+    <Property Name="grp_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="grp_desc" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="grp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_permission">
+    <Key>
+      <PropertyRef Name="perm_id" />
+    </Key>
+    <Property Name="user_sub_grp_id" Type="int" Nullable="false" />
+    <Property Name="user_path" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="perm_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_sub_group">
+    <Key>
+      <PropertyRef Name="sub_group_id" />
+    </Key>
+    <Property Name="group_id" Type="int" Nullable="false" />
+    <Property Name="sub_group_desc" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="is_active" Type="tinyint" Nullable="false" />
+    <Property Name="sub_group_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_function_cost_center">
+    <End Role="cost_center" Type="Self.cost_center" Multiplicity="1" />
+    <End Role="function" Type="Self.function" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cost_center">
+        <PropertyRef Name="cost_id" />
+      </Principal>
+      <Dependent Role="function">
+        <PropertyRef Name="cost_center" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_plant_location">
+    <End Role="location" Type="Self.location" Multiplicity="1" />
+    <End Role="plant" Type="Self.plant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="location">
+        <PropertyRef Name="loc_id" />
+      </Principal>
+      <Dependent Role="plant">
+        <PropertyRef Name="loc_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_permission_user_sub_group">
+    <End Role="user_sub_group" Type="Self.user_sub_group" Multiplicity="1" />
+    <End Role="user_permission" Type="Self.user_permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_sub_group">
+        <PropertyRef Name="sub_group_id" />
+      </Principal>
+      <Dependent Role="user_permission">
+        <PropertyRef Name="user_sub_grp_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_sub_group_user_group">
+    <End Role="user_group" Type="Self.user_group" Multiplicity="1" />
+    <End Role="user_sub_group" Type="Self.user_sub_group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_group">
+        <PropertyRef Name="grp_id" />
+      </Principal>
+      <Dependent Role="user_sub_group">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="saprfcdbModelStoreContainer">
+    <EntitySet Name="company" EntityType="Self.company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cost_center" EntityType="Self.cost_center" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="function" EntityType="Self.function" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="location" EntityType="Self.location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="plant" EntityType="Self.plant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="req_tkt_type" EntityType="Self.req_tkt_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="request_ticket" EntityType="Self.request_ticket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user_group" EntityType="Self.user_group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user_permission" EntityType="Self.user_permission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user_sub_group" EntityType="Self.user_sub_group" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_function_cost_center" Association="Self.FK_function_cost_center">
+      <End Role="cost_center" EntitySet="cost_center" />
+      <End Role="function" EntitySet="function" />
+    </AssociationSet>
+    <AssociationSet Name="FK_plant_location" Association="Self.FK_plant_location">
+      <End Role="location" EntitySet="location" />
+      <End Role="plant" EntitySet="plant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_permission_user_sub_group" Association="Self.FK_user_permission_user_sub_group">
+      <End Role="user_sub_group" EntitySet="user_sub_group" />
+      <End Role="user_permission" EntitySet="user_permission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_sub_group_user_group" Association="Self.FK_user_sub_group_user_group">
+      <End Role="user_group" EntitySet="user_group" />
+      <End Role="user_sub_group" EntitySet="user_sub_group" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="saprfcdbModelStoreContainer" CdmEntityContainer="saprfcdbEntities">
+    <EntitySetMapping Name="company">
+      <EntityTypeMapping TypeName="saprfcdbModel.company">
+        <MappingFragment StoreEntitySet="company">
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="company_code" ColumnName="company_code" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cost_center">
+      <EntityTypeMapping TypeName="saprfcdbModel.cost_center">
+        <MappingFragment StoreEntitySet="cost_center">
+          <ScalarProperty Name="cost_id" ColumnName="cost_id" />
+          <ScalarProperty Name="cost_code" ColumnName="cost_code" />
+          <ScalarProperty Name="cost_name" ColumnName="cost_name" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="function">
+      <EntityTypeMapping TypeName="saprfcdbModel.function">
+        <MappingFragment StoreEntitySet="function">
+          <ScalarProperty Name="func_name" ColumnName="func_name" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="func_id" ColumnName="func_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="location">
+      <EntityTypeMapping TypeName="saprfcdbModel.location">
+        <MappingFragment StoreEntitySet="location">
+          <ScalarProperty Name="loc_name" ColumnName="loc_name" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="loc_id" ColumnName="loc_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="log_data">
+      <EntityTypeMapping TypeName="saprfcdbModel.log_data">
+        <MappingFragment StoreEntitySet="log_data">
+          <ScalarProperty Name="log_id" ColumnName="log_id" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="ip_address" ColumnName="ip_address" />
+          <ScalarProperty Name="pc_name" ColumnName="pc_name" />
+          <ScalarProperty Name="is_authorised" ColumnName="is_authorised" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="plant">
+      <EntityTypeMapping TypeName="saprfcdbModel.plant">
+        <MappingFragment StoreEntitySet="plant">
+          <ScalarProperty Name="plant_name" ColumnName="plant_name" />
+          <ScalarProperty Name="plant_code" ColumnName="plant_code" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="plant_id" ColumnName="plant_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="req_tkt_type">
+      <EntityTypeMapping TypeName="saprfcdbModel.req_tkt_type">
+        <MappingFragment StoreEntitySet="req_tkt_type">
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+          <ScalarProperty Name="type_desc" ColumnName="type_desc" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="request_ticket">
+      <EntityTypeMapping TypeName="saprfcdbModel.request_ticket">
+        <MappingFragment StoreEntitySet="request_ticket">
+          <ScalarProperty Name="req_tkt_start_date" ColumnName="req_tkt_start_date" />
+          <ScalarProperty Name="req_tkt_status" ColumnName="req_tkt_status" />
+          <ScalarProperty Name="req_tkt_end_date" ColumnName="req_tkt_end_date" />
+          <ScalarProperty Name="req_tkt_id" ColumnName="req_tkt_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="saprfcdbModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="url">
+      <EntityTypeMapping TypeName="saprfcdbModel.url">
+        <MappingFragment StoreEntitySet="url">
+          <ScalarProperty Name="url_id" ColumnName="url_id" />
+          <ScalarProperty Name="url_value" ColumnName="url_value" />
+          <ScalarProperty Name="url_type" ColumnName="url_type" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="url_type">
+      <EntityTypeMapping TypeName="saprfcdbModel.url_type">
+        <MappingFragment StoreEntitySet="url_type">
+          <ScalarProperty Name="url_type_id" ColumnName="url_type_id" />
+          <ScalarProperty Name="url_type_name" ColumnName="url_type_name" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="saprfcdbModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="emp_epf" ColumnName="emp_epf" />
+          <ScalarProperty Name="emp_user_grp" ColumnName="emp_user_grp" />
+          <ScalarProperty Name="emp_user_sub_grp" ColumnName="emp_user_sub_grp" />
+          <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+          <ScalarProperty Name="emp_email" ColumnName="emp_email" />
+          <ScalarProperty Name="emp_password" ColumnName="emp_password" />
+          <ScalarProperty Name="emp_plant" ColumnName="emp_plant" />
+          <ScalarProperty Name="emp_mobile" ColumnName="emp_mobile" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_group">
+      <EntityTypeMapping TypeName="saprfcdbModel.user_group">
+        <MappingFragment StoreEntitySet="user_group">
+          <ScalarProperty Name="grp_name" ColumnName="grp_name" />
+          <ScalarProperty Name="grp_desc" ColumnName="grp_desc" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="grp_id" ColumnName="grp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_permission">
+      <EntityTypeMapping TypeName="saprfcdbModel.user_permission">
+        <MappingFragment StoreEntitySet="user_permission">
+          <ScalarProperty Name="user_sub_grp_id" ColumnName="user_sub_grp_id" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="url_type" ColumnName="url_type" />
+          <ScalarProperty Name="is_view" ColumnName="is_view" />
+          <ScalarProperty Name="is_edit" ColumnName="is_edit" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="perm_id" ColumnName="perm_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_sub_group">
+      <EntityTypeMapping TypeName="saprfcdbModel.user_sub_group">
+        <MappingFragment StoreEntitySet="user_sub_group">
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="sub_group_id" ColumnName="sub_group_id" />
+          <ScalarProperty Name="sub_group_name" ColumnName="sub_group_name" />
+          <ScalarProperty Name="sub_group_desc" ColumnName="sub_group_desc" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YH_ACT_EMP_LIST">
+      <EntityTypeMapping TypeName="saprfcdbModel.YH_ACT_EMP_LIST">
+        <MappingFragment StoreEntitySet="YH_ACT_EMP_LIST">
+          <ScalarProperty Name="EPF" ColumnName="EPF" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+          <ScalarProperty Name="FUNCT" ColumnName="FUNCT" />
+          <ScalarProperty Name="COST_CENTER" ColumnName="COST_CENTER" />
+          <ScalarProperty Name="ENDDA" ColumnName="ENDDA" />
+          <ScalarProperty Name="BIRTHDA" ColumnName="BIRTHDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

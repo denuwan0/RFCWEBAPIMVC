@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="saprfcdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="company">
+    <Key>
+      <PropertyRef Name="company_id" />
+    </Key>
+    <Property Name="company_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="company_code" Type="Int32" Nullable="false" />
+    <Property Name="company_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="users" Relationship="Self.FK_user_company" FromRole="company" ToRole="user" />
+  </EntityType>
+  <EntityType Name="cost_center">
+    <Key>
+      <PropertyRef Name="cost_id" />
+    </Key>
+    <Property Name="cost_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cost_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cost_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="functions" Relationship="Self.FK_function_cost_center" FromRole="cost_center" ToRole="function" />
+    <NavigationProperty Name="plants" Relationship="Self.FK_plant_cost_center" FromRole="cost_center" ToRole="plant" />
+  </EntityType>
+  <EntityType Name="function">
+    <Key>
+      <PropertyRef Name="func_id" />
+    </Key>
+    <Property Name="func_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cost_center" Type="Int32" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="func_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="cost_center1" Relationship="Self.FK_function_cost_center" FromRole="function" ToRole="cost_center" />
+    <NavigationProperty Name="users" Relationship="Self.FK_user_function" FromRole="function" ToRole="user" />
+  </EntityType>
+  <EntityType Name="location">
+    <Key>
+      <PropertyRef Name="loc_id" />
+    </Key>
+    <Property Name="loc_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="loc_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="log_data">
+    <Key>
+      <PropertyRef Name="log_id" />
+    </Key>
+    <Property Name="log_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="emp_id" Type="Int32" Nullable="false" />
+    <Property Name="time" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ip_address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pc_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_authorised" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="plant">
+    <Key>
+      <PropertyRef Name="plant_id" />
+    </Key>
+    <Property Name="loc_id" Type="Int32" Nullable="false" />
+    <Property Name="plant_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="plant_code" Type="Int32" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="plant_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cost_center" Type="Int32" />
+    <NavigationProperty Name="cost_center1" Relationship="Self.FK_plant_cost_center" FromRole="plant" ToRole="cost_center" />
+  </EntityType>
+  <EntityType Name="req_tkt_type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="request_ticket" Relationship="Self.FK_request_ticket_req_tkt_type" FromRole="req_tkt_type" ToRole="request_ticket" />
+  </EntityType>
+  <EntityType Name="request_ticket">
+    <Key>
+      <PropertyRef Name="req_tkt_id" />
+    </Key>
+    <Property Name="req_tkt_type" Type="Int32" Nullable="false" />
+    <Property Name="req_tkt_start_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="req_tkt_status" Type="Int32" Nullable="false" />
+    <Property Name="req_tkt_emp_id" Type="Int32" Nullable="false" />
+    <Property Name="req_tkt_end_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="req_tkt_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="req_tkt_type1" Relationship="Self.FK_request_ticket_req_tkt_type" FromRole="request_ticket" ToRole="req_tkt_type" />
+    <NavigationProperty Name="user" Relationship="Self.FK_request_ticket_user" FromRole="request_ticket" ToRole="user" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="t_code">
+    <Key>
+      <PropertyRef Name="t_code_id" />
+    </Key>
+    <Property Name="t_code_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="t_code_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="user_permission" Relationship="Self.FK_user_permission_t_code" FromRole="t_code" ToRole="user_permission" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="emp_id" />
+    </Key>
+    <Property Name="emp_epf" Type="Int32" Nullable="false" />
+    <Property Name="emp_user_grp" Type="Int32" Nullable="false" />
+    <Property Name="emp_user_sub_grp" Type="Int32" Nullable="false" />
+    <Property Name="emp_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="emp_email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="emp_password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="emp_company" Type="Int32" Nullable="false" />
+    <Property Name="emp_function" Type="Int32" Nullable="false" />
+    <Property Name="emp_location" Type="Int32" Nullable="false" />
+    <Property Name="emp_plant" Type="Int32" Nullable="false" />
+    <Property Name="emp_mobile" Type="Int32" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="emp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="company" Relationship="Self.FK_user_company" FromRole="user" ToRole="company" />
+    <NavigationProperty Name="function" Relationship="Self.FK_user_function" FromRole="user" ToRole="function" />
+    <NavigationProperty Name="request_ticket" Relationship="Self.FK_request_ticket_user" FromRole="user" ToRole="request_ticket" />
+    <NavigationProperty Name="user_group" Relationship="Self.FK_user_user_group" FromRole="user" ToRole="user_group" />
+    <NavigationProperty Name="user_sub_group" Relationship="Self.FK_user_user_sub_group" FromRole="user" ToRole="user_sub_group" />
+  </EntityType>
+  <EntityType Name="user_group">
+    <Key>
+      <PropertyRef Name="grp_id" />
+    </Key>
+    <Property Name="grp_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="grp_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="grp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="users" Relationship="Self.FK_user_user_group" FromRole="user_group" ToRole="user" />
+    <NavigationProperty Name="user_sub_group" Relationship="Self.FK_user_sub_group_user_group" FromRole="user_group" ToRole="user_sub_group" />
+  </EntityType>
+  <EntityType Name="user_permission">
+    <Key>
+      <PropertyRef Name="perm_id" />
+    </Key>
+    <Property Name="user_sub_grp_id" Type="Int32" Nullable="false" />
+    <Property Name="t_code_id" Type="Int32" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="perm_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="t_code" Relationship="Self.FK_user_permission_t_code" FromRole="user_permission" ToRole="t_code" />
+    <NavigationProperty Name="user_sub_group" Relationship="Self.FK_user_permission_user_sub_group" FromRole="user_permission" ToRole="user_sub_group" />
+  </EntityType>
+  <EntityType Name="user_sub_group">
+    <Key>
+      <PropertyRef Name="sub_group_id" />
+    </Key>
+    <Property Name="group_id" Type="Int32" Nullable="false" />
+    <Property Name="sub_group_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_active" Type="Byte" Nullable="false" />
+    <Property Name="sub_group_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="users" Relationship="Self.FK_user_user_sub_group" FromRole="user_sub_group" ToRole="user" />
+    <NavigationProperty Name="user_group" Relationship="Self.FK_user_sub_group_user_group" FromRole="user_sub_group" ToRole="user_group" />
+    <NavigationProperty Name="user_permission" Relationship="Self.FK_user_permission_user_sub_group" FromRole="user_sub_group" ToRole="user_permission" />
+  </EntityType>
+  <EntityType Name="YH_ACT_EMP_LIST">
+    <Key>
+      <PropertyRef Name="EPF" />
+    </Key>
+    <Property Name="EPF" Type="Int32" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LOCATION" Type="Int32" />
+    <Property Name="FUNCT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="COST_CENTER" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ENDDA" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="BIRTHDA" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_user_company">
+    <End Role="company" Type="Self.company" Multiplicity="1" />
+    <End Role="user" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="company">
+        <PropertyRef Name="company_id" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="emp_company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_function_cost_center">
+    <End Role="cost_center" Type="Self.cost_center" Multiplicity="1" />
+    <End Role="function" Type="Self.function" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cost_center">
+        <PropertyRef Name="cost_id" />
+      </Principal>
+      <Dependent Role="function">
+        <PropertyRef Name="cost_center" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_plant_cost_center">
+    <End Role="cost_center" Type="Self.cost_center" Multiplicity="0..1" />
+    <End Role="plant" Type="Self.plant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cost_center">
+        <PropertyRef Name="cost_id" />
+      </Principal>
+      <Dependent Role="plant">
+        <PropertyRef Name="cost_center" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_function">
+    <End Role="function" Type="Self.function" Multiplicity="1" />
+    <End Role="user" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="function">
+        <PropertyRef Name="func_id" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="emp_function" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_request_ticket_req_tkt_type">
+    <End Role="req_tkt_type" Type="Self.req_tkt_type" Multiplicity="1" />
+    <End Role="request_ticket" Type="Self.request_ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="req_tkt_type">
+        <PropertyRef Name="type_id" />
+      </Principal>
+      <Dependent Role="request_ticket">
+        <PropertyRef Name="req_tkt_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_request_ticket_user">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="request_ticket" Type="Self.request_ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="emp_id" />
+      </Principal>
+      <Dependent Role="request_ticket">
+        <PropertyRef Name="req_tkt_emp_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_permission_t_code">
+    <End Role="t_code" Type="Self.t_code" Multiplicity="1" />
+    <End Role="user_permission" Type="Self.user_permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_code">
+        <PropertyRef Name="t_code_id" />
+      </Principal>
+      <Dependent Role="user_permission">
+        <PropertyRef Name="t_code_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_user_group">
+    <End Role="user_group" Type="Self.user_group" Multiplicity="1" />
+    <End Role="user" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_group">
+        <PropertyRef Name="grp_id" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="emp_user_grp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_user_sub_group">
+    <End Role="user_sub_group" Type="Self.user_sub_group" Multiplicity="1" />
+    <End Role="user" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_sub_group">
+        <PropertyRef Name="sub_group_id" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="emp_user_sub_grp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_sub_group_user_group">
+    <End Role="user_group" Type="Self.user_group" Multiplicity="1" />
+    <End Role="user_sub_group" Type="Self.user_sub_group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_group">
+        <PropertyRef Name="grp_id" />
+      </Principal>
+      <Dependent Role="user_sub_group">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_permission_user_sub_group">
+    <End Role="user_sub_group" Type="Self.user_sub_group" Multiplicity="1" />
+    <End Role="user_permission" Type="Self.user_permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_sub_group">
+        <PropertyRef Name="sub_group_id" />
+      </Principal>
+      <Dependent Role="user_permission">
+        <PropertyRef Name="user_sub_grp_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="saprfcdbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="companies" EntityType="Self.company" />
+    <EntitySet Name="cost_center" EntityType="Self.cost_center" />
+    <EntitySet Name="functions" EntityType="Self.function" />
+    <EntitySet Name="locations" EntityType="Self.location" />
+    <EntitySet Name="log_data" EntityType="Self.log_data" />
+    <EntitySet Name="plants" EntityType="Self.plant" />
+    <EntitySet Name="req_tkt_type" EntityType="Self.req_tkt_type" />
+    <EntitySet Name="request_ticket" EntityType="Self.request_ticket" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="t_code" EntityType="Self.t_code" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="user_group" EntityType="Self.user_group" />
+    <EntitySet Name="user_permission" EntityType="Self.user_permission" />
+    <EntitySet Name="user_sub_group" EntityType="Self.user_sub_group" />
+    <EntitySet Name="YH_ACT_EMP_LIST" EntityType="Self.YH_ACT_EMP_LIST" />
+    <AssociationSet Name="FK_user_company" Association="Self.FK_user_company">
+      <End Role="company" EntitySet="companies" />
+      <End Role="user" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_function_cost_center" Association="Self.FK_function_cost_center">
+      <End Role="cost_center" EntitySet="cost_center" />
+      <End Role="function" EntitySet="functions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_plant_cost_center" Association="Self.FK_plant_cost_center">
+      <End Role="cost_center" EntitySet="cost_center" />
+      <End Role="plant" EntitySet="plants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_function" Association="Self.FK_user_function">
+      <End Role="function" EntitySet="functions" />
+      <End Role="user" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_request_ticket_req_tkt_type" Association="Self.FK_request_ticket_req_tkt_type">
+      <End Role="req_tkt_type" EntitySet="req_tkt_type" />
+      <End Role="request_ticket" EntitySet="request_ticket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_request_ticket_user" Association="Self.FK_request_ticket_user">
+      <End Role="user" EntitySet="users" />
+      <End Role="request_ticket" EntitySet="request_ticket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_permission_t_code" Association="Self.FK_user_permission_t_code">
+      <End Role="t_code" EntitySet="t_code" />
+      <End Role="user_permission" EntitySet="user_permission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_user_group" Association="Self.FK_user_user_group">
+      <End Role="user_group" EntitySet="user_group" />
+      <End Role="user" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_user_sub_group" Association="Self.FK_user_user_sub_group">
+      <End Role="user_sub_group" EntitySet="user_sub_group" />
+      <End Role="user" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_sub_group_user_group" Association="Self.FK_user_sub_group_user_group">
+      <End Role="user_group" EntitySet="user_group" />
+      <End Role="user_sub_group" EntitySet="user_sub_group" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_permission_user_sub_group" Association="Self.FK_user_permission_user_sub_group">
+      <End Role="user_sub_group" EntitySet="user_sub_group" />
+      <End Role="user_permission" EntitySet="user_permission" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
