@@ -15,19 +15,19 @@ namespace RFCWEBAPIMVC.SapConnection
                 RfcConfigParameters parms = new RfcConfigParameters();
 
 
-                parms.Add(RfcConfigParameters.AppServerHost, "10.10.50.12"); //prd
-                //parms.Add(RfcConfigParameters.AppServerHost, "10.10.50.51"); //dev
-                //parms.Add(RfcConfigParameters.AppServerHost, "10.10.50.52"); //qas
+                parms.Add(RfcConfigParameters.AppServerHost, ""); //prd
+                //parms.Add(RfcConfigParameters.AppServerHost, ""); //dev
+                //parms.Add(RfcConfigParameters.AppServerHost, ""); //qas
                 parms.Add(RfcConfigParameters.SystemNumber, "00"); //prd
                 parms.Add(RfcConfigParameters.SystemID, "PR1");
                 //parms.Add(RfcConfigParameters.SystemID, "DEV");
                 //parms.Add(RfcConfigParameters.SystemID, "QAS");
-                parms.Add(RfcConfigParameters.User, "BIUSER"); //prd
-                //parms.Add(RfcConfigParameters.User, "00117534"); //qas
-                //parms.Add(RfcConfigParameters.User, "00117534"); //dev
-                parms.Add(RfcConfigParameters.Password, "userbi@1");//prd
-                //parms.Add(RfcConfigParameters.Password, "707602");//qas
-                //parms.Add(RfcConfigParameters.Password, "0712917184"); //dev
+                parms.Add(RfcConfigParameters.User, ""); //prd
+                //parms.Add(RfcConfigParameters.User, ""); //qas
+                //parms.Add(RfcConfigParameters.User, ""); //dev
+                parms.Add(RfcConfigParameters.Password, "");//prd
+                //parms.Add(RfcConfigParameters.Password, "");//qas
+                //parms.Add(RfcConfigParameters.Password, ""); //dev
                 parms.Add(RfcConfigParameters.Client, "300"); //prd
                 //parms.Add(RfcConfigParameters.Client, "120"); // dev
                 //parms.Add(RfcConfigParameters.Client, "300"); //qas
