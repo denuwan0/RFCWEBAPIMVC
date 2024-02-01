@@ -33,10 +33,10 @@ namespace RFCWEBAPIMVC.Controllers
         //        var sessionOptions = new SessionOptions
         //        {
         //            Protocol = Protocol.Sftp,
-        //            HostName = "10.10.50.51", //sap server
-        //            UserName = "root", //server username
-        //            Password = "pDEVApr2o22", //server password
-        //            SshHostKeyFingerprint = "ecdsa-sha2-nistp256 256 IBu6wmO+LqUm7WsLPBOe5UDROv5ykzWxT2IurK6KRSw", //winscp fingerprint
+        //            HostName = "", //sap server
+        //            UserName = "", //server username
+        //            Password = "", //server password
+        //            SshHostKeyFingerprint = "", //winscp fingerprint
         //        };
 
         //        const string localPath = @"C:\DEV"; //local server path
